@@ -60,7 +60,7 @@ public class Calculate
 		int ax = a1*b1;
 		int bx = a1*b2 + a2*b1;
 		int cx = a2*b2;
-		return ax + var + "^2" + "+" + bx + "+" + cx;
+		return ax + var + "^2" + "+" + bx + var + "+" + cx;
 	}
 	//returns true or false if the num1 is divisible by num2
 	public static boolean isDivisibleBy(int num1, int num2)

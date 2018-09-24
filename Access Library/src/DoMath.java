@@ -21,6 +21,14 @@ public class DoMath
 		System.out.println(Calculate.isDivisibleBy(3, 4));
 		System.out.println(Calculate.absValue(-4));
 		System.out.println(Calculate.max(2, 4));
+		System.out.println(Calculate.min(1, 2));
+		System.out.println(Calculate.round2(4.222));
+		System.out.println(Calculate.exponent(2,3));
+		System.out.println(Calculate.factorial(3));
+		System.out.println(Calculate.isPrime(13));
+		System.out.println(Calculate.gcf(8,16));
+		System.out.println(Calculate.sqrt(4));
+		
 	}
 
 }
