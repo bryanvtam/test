@@ -17,10 +17,10 @@ public class DoMath
 		System.out.println(Calculate.discriminant(2.0, 3.0, 4.0));
 		System.out.println(Calculate.toImproperFrac(3,4,2));
 		System.out.println(Calculate.toMixedNum(7, 3 ));
-		//System.out.println(Calculate.foil(3,4,5,6,"x"));
-		//System.out.println(Calculate.isDivisibleBy(3, 4));
-		//System.out.println(Calculate.absValue(-4));
-		//System.out.println(Calculate.max(2, 4));
+		System.out.println(Calculate.foil(3,4,5,6,"x"));
+		System.out.println(Calculate.isDivisibleBy(3, 4));
+		System.out.println(Calculate.absValue(-4));
+		System.out.println(Calculate.max(2, 4));
 	}
 
 }
