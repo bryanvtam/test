@@ -36,7 +36,7 @@ public class Calculate
 	{
 		return (rad*(180/3.14159));
 	}
-	//returns the value of the discriminant
+	//returns the value of the discriminate
 	public static double discriminant(double a, double b, double c)
 	{
 		return ((b*b)-(4*a*c));
@@ -74,7 +74,7 @@ public class Calculate
 			return false;
 		}
 	}
-	//returns the absolute value of the num
+	//returns the absolute value of the number
 	public static double absValue(double num)
 	{
 		if (num<0)
@@ -115,7 +115,7 @@ public class Calculate
 			return num2;
 		}
 	}
-	//returns a inputed double into a number rounded to the hundredths place
+	//returns a inputed double into a number rounded to the hundredth's place
 	public static double round2 (double num1)
 	{
 		double rounded = (int) (num1*1000);
@@ -186,18 +186,22 @@ public class Calculate
 		}
 		return output;
 	}
-	//FIX
-	public static double sqrt (double num)
+	//This returns a double of the square root of a number
+	public static double sqrt (double d)
 	{
 		double t = 1;
-		while ((num/t) != t) 
+		double squareroot = d/2;
+		do 
 		{
-			t+= 0.01;
+			t = squareroot;
+			squareroot = ((t+ (d/t))/2);
 		}
-		System.out.println(t);
-		return t;
+		while ((t-squareroot) != 0);
+		{
+			return round2(squareroot);
+		}
 	}
-	//-b+-
+	// (-b+-sqrt of b^2 - 4ac )/ 2a
 	public static String quadForm( int a, int b, int c)
 	{
 		double numerator = discriminant(a,b,c);
