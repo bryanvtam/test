@@ -118,10 +118,12 @@ public class Calculate
 	//returns a inputed double into a number rounded to the hundredths place
 	public static double round2 (double num1)
 	{
-		int rounded = (int) (num1*1000);
+		double rounded = (int) (num1*1000);
 		if (rounded%10 >=5)
 		{
-			return ((int)(rounded+10/10)/100.0);
+			rounded=((int)(rounded+10)/10);
+			double round = rounded/100;
+			return (round);
 		}
 		else
 		{
@@ -159,7 +161,7 @@ public class Calculate
 	//returns true or false that the integer was a prime number or not
 	public static boolean isPrime(int num1)
 	{
-		for(int i = 2; i <num1; i+=1)
+		for(int i = 2; i < num1;i++)
 		{
 			if (isDivisibleBy(num1, i))
 			{
@@ -184,10 +186,24 @@ public class Calculate
 		}
 		return output;
 	}
+	//FIX
 	public static double sqrt (double num)
 	{
-		double sqrt1 = 10;
-		return sqrt1;
+		double t = 1;
+		while ((num/t) != t) 
+		{
+			t+= 0.01;
+		}
+		System.out.println(t);
+		return t;
+	}
+	//-b+-
+	public static String quadForm( int a, int b, int c)
+	{
+		double numerator = discriminant(a,b,c);
+		return("-"+ b + sqrt(numerator) + "/" + (2*a));
+		
+		
 	}
 }
 

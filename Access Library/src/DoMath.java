@@ -8,7 +8,7 @@ public class DoMath
 {
 	public static void main(String[]args) 
 	{
-		System.out.println(Calculate.square(-3));
+		/*System.out.println(Calculate.square(-3));
 		System.out.println(Calculate.cube(-3));
 		System.out.println(Calculate.average(2.0, 4.0));
 		System.out.println(Calculate.average(2.0, 2.0, 4.0));
@@ -21,13 +21,14 @@ public class DoMath
 		System.out.println(Calculate.isDivisibleBy(3, 4));
 		System.out.println(Calculate.absValue(-4));
 		System.out.println(Calculate.max(2, 4));
-		System.out.println(Calculate.min(1, 2));
-		System.out.println(Calculate.round2(4.222));
-		System.out.println(Calculate.exponent(2,3));
+		System.out.println(Calculate.min(1, 2)); */
+		System.out.println(Calculate.round2(10.237));
+		/*System.out.println(Calculate.exponent(2,3));
 		System.out.println(Calculate.factorial(3));
 		System.out.println(Calculate.isPrime(13));
-		System.out.println(Calculate.gcf(8,16));
-		System.out.println(Calculate.sqrt(4));
+		System.out.println(Calculate.gcf(8,16));*/
+		System.out.println(Calculate.sqrt(4)); 
+		//System.out.println(Calculate.quadForm(1, 3, 2));
 		
 	}
 
