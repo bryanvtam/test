@@ -37,7 +37,7 @@ public class Calculate
 		return (rad*(180/3.14159));
 	}
 	//returns the value of the discriminate
-	public static double discriminant(double a, double b, double c)
+	public static double discriminate(double a, double b, double c)
 	{
 		return ((b*b)-(4*a*c));
 	}
@@ -204,7 +204,8 @@ public class Calculate
 	// (-b+-sqrt of b^2 - 4ac )/ 2a
 	public static String quadForm( int a, int b, int c)
 	{
-		double numerator = discriminant(a,b,c);
+		double plus = ((-b + sqrt(discriminate))/(2a));
+		double numerator = discriminate(a,b,c);
 		return("-"+ b + sqrt(numerator) + "/" + (2*a));
 		
 		
