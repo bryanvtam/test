@@ -65,6 +65,7 @@ public class Calculate
 	//returns true or false if the num1 is divisible by num2
 	public static boolean isDivisibleBy(int num1, int num2)
 	{
+		if (num2 == 0) throw new IllegalArgumentException("Cannot not divide by 0.");
 		if (num1%num2 == 0)
 		{
 			return true;
@@ -133,6 +134,7 @@ public class Calculate
 	//returns a double of a value to a positive integer power
 	public static double exponent (double num, int power)
 	{
+		if (power<0) throw new IllegalArgumentException("Invalid #, only positives for exponent");
 		double answer = num;
 		if (power < 0)
 		{
@@ -147,6 +149,7 @@ public class Calculate
 	//returns an integer of the factorial of the value passed
 	public static int factorial(int num1)
 	{
+		if (num1<0) throw new IllegalArgumentException("Invalid #, only postives for factorials");
 		if (num1 == 1) 
 		{
 			return 1;
@@ -159,17 +162,17 @@ public class Calculate
 		return output;
 	}
 	//returns true or false that the integer was a prime number or not
-	public static boolean isPrime(int num1)
+	public static boolean isPrime (int num1)
 	{
-		for(int i = 2; i < num1;i++)
+		for (int divide = 2; divide <=num1; divide+=1)
 		{
-			if (isDivisibleBy(num1, i))
+			if (num1%divide != 0)
 			{
-				return true;
+				return false;
 			}
 			else 
 			{
-				return false;
+				return true;
 			}
 		}
 	}
@@ -189,6 +192,7 @@ public class Calculate
 	//This returns a double of the square root of a number
 	public static double sqrt (double d)
 	{
+		if (d < 0) throw new IllegalArgumentException("Cannot square root a negative number.");
 		double t = 1;
 		double squareroot = d/2;
 		do 
@@ -201,14 +205,12 @@ public class Calculate
 			return round2(squareroot);
 		}
 	}
-	// (-b+-sqrt of b^2 - 4ac )/ 2a
-	public static String quadForm( int a, int b, int c)
+	// (-b+-sqrt of b^2 - 4ac )/ 2a, gives you two roots for the given a,b,c values
+	public static String quadForm(int a , int b , int c )
 	{
-		double plus = ((-b + sqrt(discriminate))/(2a));
-		double numerator = discriminate(a,b,c);
-		return("-"+ b + sqrt(numerator) + "/" + (2*a));
-		
-		
+		double plus = ((-b + (sqrt(discriminate(a,b,c))))/(2*a));
+		double minus = ((-b - (sqrt(discriminate(a,b,c))))/(2*a));
+		return (plus +" & " + minus);
 	}
 }
 
