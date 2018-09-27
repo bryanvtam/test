@@ -164,7 +164,8 @@ public class Calculate
 	//returns true or false that the integer was a prime number or not
 	public static boolean isPrime (int num1)
 	{
-		for (int divide = 2; divide <=num1; divide+=1)
+		int divide = 2 ;
+		while (divide <= num1)
 		{
 			if (num1%divide != 0)
 			{
@@ -174,6 +175,7 @@ public class Calculate
 			{
 				return true;
 			}
+				divide++;
 		}
 	}
 	//finds the greatest common factor of two integers
