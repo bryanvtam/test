@@ -1,7 +1,7 @@
 /*
  * This class contains the methods to various math related tasks.
  * Bryan Tam
- * 09/12/2018
+ * 09/12/201S8
  * Version #1
  */
 public class Calculate
@@ -162,7 +162,7 @@ public class Calculate
 		return output;
 	}
 	//returns true or false that the integer was a prime number or not
-	public static boolean isPrime (int num1)
+	/*public static boolean isPrime (int num1)
 	{
 		int divide = 2 ;
 		while (divide <= num1)
@@ -177,7 +177,7 @@ public class Calculate
 			}
 				divide++;
 		}
-	}
+	}*/
 	//finds the greatest common factor of two integers
 	public static int gcf(int num1, int num2)
 	{
