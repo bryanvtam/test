@@ -27,6 +27,7 @@ public class DoMath
 		System.out.println(Calculate.factorial(3));
 		System.out.println(Calculate.gcf(8,16));*/
 		//System.out.println(Calculate.sqrt(9)); 
+		System.out.println(Math.max(18 - 5 + Math.random(), Math.ceil(4.6 * 3)));
 	}
 
 }
